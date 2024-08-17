@@ -1,9 +1,8 @@
-// controllers/eventController.js
 const Event = require('../models/eventModel'); 
 const User = require('../models/userModel');
 const { validateEventDetails } = require('../utils/validation');
 
-// // Controller function to fetch all events
+// Controller function to fetch all events
 const getAllEvents = async (req, res) => {
     try {
         const events = await Event.find(); // Fetch all events from the database
@@ -115,8 +114,7 @@ const registerForEvent = async (req, res) => {
         return res.status(404).send("User not found");
     }
 
-    console.log(event)
-    console.log(user)
+    
    
     try {
         // Check if the user is already a participant

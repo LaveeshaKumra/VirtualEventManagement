@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
+const profileRoutes = require('./routes/profileRoutes');
 const app = express();
 
 app.use(bodyParser.json());
@@ -15,7 +16,7 @@ mongoose.connect(process.env.DB_STRING)
 
 app.use('/auth', authRoutes);
 app.use('/events', eventRoutes);
-//app.use('/profile', profileRoutes);
+app.use('/profile', profileRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

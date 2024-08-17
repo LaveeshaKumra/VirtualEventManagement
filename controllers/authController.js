@@ -58,11 +58,13 @@ exports.login = async (req, res) => {
         if (!pwdcheck) {
             return res.status(400).send('Invalid email or password.');
         }
-
+        console.log(existingUser)
+        console.log(existingUser._id)
         // Generate a JWT token
         const token = jwt.sign({
             email: existingUser.email,
-            role: existingUser.role
+            role: existingUser.role,
+            _id: existingUser._id
         }, JWT_SECRET, { expiresIn: '24h' });
 
         res.json({ token });
