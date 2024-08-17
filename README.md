@@ -143,9 +143,29 @@ Header:
     Authorization: Bearer <jwt_token>
 
 
+### Get User Profile
 
+GET localhost:3000/profile
 
+Header:
 
+    Authorization: Bearer <jwt_token>
+
+### Get User Bookings
+
+GET localhost:3000/profile/bookings
+
+Header:
+
+    Authorization: Bearer <jwt_token>
+
+### Cancel Booking
+
+PUT localhost:3000/profile/bookings/:eventId/cancel
+
+Header:
+
+    Authorization: Bearer <jwt_token>
 
 
 
