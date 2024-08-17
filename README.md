@@ -142,6 +142,7 @@ Header:
 
     Authorization: Bearer <jwt_token>
 
+## User Profile
 
 ### Get User Profile
 
